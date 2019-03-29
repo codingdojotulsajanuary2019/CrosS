@@ -1,0 +1,61 @@
+.header{
+    color: white;
+}
+div{
+    width: 1825px;
+    padding: 5px;
+    padding-left: 20px;
+    margin: 15px;
+    margin-left: 5px;
+    display: block;
+    background-color: red;
+    border-radius: 15px;
+    font-size: 110%;
+}
+div:nth-child(2){
+    width: 250px;
+    height: 315px;
+    padding: 30px;
+    padding-left: 30px;
+    margin: 15px;
+    margin-left: 5px;
+    display: inline-block;
+    background-color: #3EA99F;
+    border-radius: 30px;
+    font-size: 110%;
+}
+div:nth-child(3){
+    left: 345px;
+    bottom: 414px;
+    width: 1461px;
+    height: 635px;
+    padding: 30px;
+    padding-top: 10px;
+    margin: 15px;
+    margin-left: 5px;
+    display: inline-block;
+    background-color: rgb(3, 3, 3);
+    border-radius: 30px;
+    font-size: 110%;
+}
+.main{
+    font-size: 125%;
+}
+body{
+    width: 1875px;
+}
+.party{
+    vertical-align: top;
+}
+div:nth-child(4){
+    width: 1835px;
+    padding: 3px;
+    padding-left: 20px;
+    margin: 15px;
+    margin-left: 5px;
+    margin-top: 5px;
+    display: block;
+    background-color: grey;
+    border-radius: 15px;
+    font-size: 107%;
+}

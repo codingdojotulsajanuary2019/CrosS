@@ -1,0 +1,30 @@
+﻿@using chefsNDishes.Models;
+@model AllChefs;
+
+<div class="text-center">
+    <h1 class="text-light">Chefs | <a href="/">Dishes</a></h1>
+    <a href="/addChef">Add a Chef!</a>
+</div>
+<HR>
+<div>
+    <h3 class="border-bottom border-primary d-inline-block text-light">Check out our roster of Chefs!</h3>
+</div>
+<div>
+    <table class="text-light table border-right border-left border-bottom border-light mt-3">
+        <tr>
+            <th>Name</th>
+            <th>Age</th>
+            <th># of Dishes</th>
+        </tr>
+        
+        @foreach(var x in @Model.theChefs)
+        {
+            int age = (@DateTime.Now.Year - @x.DOB.Year);
+            <tr>
+                <td>@x.FirstName @x.LastName</td>
+                <td>@age</td>
+                <td>@x.CreatedDishes.Count</td>
+            </tr>
+        }
+    </table>
+</div>

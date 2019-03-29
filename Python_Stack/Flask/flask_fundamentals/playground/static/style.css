@@ -1,0 +1,11 @@
+div.blueboxes{
+    height: 300px;
+    width: 300px;
+    background-color: blue;
+    display: inline-block;
+    margin: 20px;
+}
+body{
+    height: 500px;
+    display: inline-block;
+}

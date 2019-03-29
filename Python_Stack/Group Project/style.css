@@ -1,0 +1,11 @@
+.pokemon{
+    width: 1600px;
+    display: inline-block;
+}
+.redbox{
+    display: inline-block;
+    height: 600px;
+    border: 10px solid red;
+    width: 250px;
+    vertical-align: top;
+}

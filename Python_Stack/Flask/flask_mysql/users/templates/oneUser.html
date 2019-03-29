@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.0/css/bootstrap.min.css" integrity="sha384-PDle/QlgIONtM1aqA2Qemk5gPOE7wFq8+Em+G/hmo5Iq0CCmYZLv3fVRDJ4MMwEA" crossorigin="anonymous">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>View User</title>
+</head>
+<body class="bg-dark text-primary text-center">
+    <h2>
+        User {{ y[0]["user_id"] }}
+    </h2>
+        <p><a href="/users">Home</a></p>
+    <p>
+        Full Name: {{y[0]["full_name"]}}
+    </p>
+    <p>
+        Email: {{y[0]["email"]}}
+    </p>
+    <p>
+        Created On: {{y[0]["created_at"]}}
+    </p>
+    <p>
+        Last Updated On: {{y[0]["updated_at"]}}
+    </p>
+    <span>
+        <a href="/users/{{y[0]["user_id"]}}/edit">Edit</a> | <a href="/delete/{{y[0]["user_id"]}}">Delete</a>
+    </span>
+</body>
+</html>

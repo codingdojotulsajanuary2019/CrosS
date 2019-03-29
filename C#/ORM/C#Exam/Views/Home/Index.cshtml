@@ -1,0 +1,41 @@
+﻿@using CExam.Models;
+@model Both;
+
+<div>
+    <h1 class="text-warning">Welcome!</h1>
+</div>
+<HR>
+<div class="bg-light rounded text-dark d-inline-block text-left mt-3 pt-3 pb-3 pl-3 pr-3 mr-5" style="width: 540px;">
+    <h3 class="border-bottom border-warning col-sm-5">Register</h3>
+    <HR>
+    <form asp-action="Register" asp-controller="Home" method="POST">
+        <h4>Name:</h4>
+        <input type="text" class="form-control col-sm-8 mb-3" asp-for="newUser.Name">
+            <span class="text-danger" asp-validation-for="newUser.Name"></span>
+        <h4>Alias:</h4>
+        <input type="text" class="form-control col-sm-8 mb-3" asp-for="newUser.Alias">
+            <span class="text-danger" asp-validation-for="newUser.Alias"></span>
+        <h4>Email:</h4>
+        <input type="text" class="form-control col-sm-8 mb-3" asp-for="newUser.Email">
+            <span class="text-danger" asp-validation-for="newUser.Email"></span>
+        <h4>Password:</h4>
+        <input type="text" class="form-control col-sm-8 mb-3" asp-for="newUser.Password">
+            <span class="text-danger" asp-validation-for="newUser.Password"></span>
+        <h4>Confirm PW:</h4>
+        <input type="text" class="form-control col-sm-8 mb-3" asp-for="newUser.Confirm">
+        <input type="submit" class="btn btn-warning" value="Register">
+    </form>
+</div>
+<div class="bg-light rounded text-dark d-inline-block align-top text-left mt-3 pt-3 pb-3 pl-3 pr-3 ml-5" style="width: 540px;">
+    <h3 class="border-bottom border-warning col-sm-5">Login</h3>
+    <HR>
+    <form asp-action="SignIn" asp-controller="Home" method="POST">
+        <h4>Email:</h4>
+        <input type="text" class="form-control col-sm-8 mb-3" asp-for="LoginUser.Email">
+            <span class="text-danger" asp-validation-for="LoginUser.Email"></span>
+        <h4>Password:</h4>
+        <input type="text" class="form-control col-sm-8 mb-3" asp-for="LoginUser.Password">
+            <span class="text-danger" asp-validation-for="LoginUser.Password"></span>
+        <input type="submit" class="btn btn-warning" value="Login">
+    </form>
+</div>

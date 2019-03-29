@@ -1,0 +1,33 @@
+@using chefsNDishes.Models;
+@model All;
+
+<div class="mb-2 text-center">
+    <a href="/" class="btn btn-primary float-right mt-2">Home</a>
+    <h1 class="text-light" style="margin-left: 75px;"><U>Add a Dish!</U></h1>
+</div>
+<HR>
+<div class="bg-light rounded pt-5 pb-5 pl-5 pr-5 text-center" style="margin-top: 50px; height: 550px;">
+    <form asp-action="CreateDish" asp-controller="Home" class="text-center" method="POST">
+        <div class="border border-light" style="width: 500px; margin-left: 260px;">
+            <select class="dishselect d-inline-block mb-3" class="text-center" asp-for="newDish.ChefId">
+                @foreach(Chef c in @Model.theChefs)
+                {
+                    <option value="@c.ChefId">@c.FirstName @c.LastName</option>
+                }
+            </select>
+        </div>
+        <div class="border border-light">
+            <input class="dishpost mb-3" type="text" asp-for="newDish.DishName" placeholder="Name of Dish">
+                <span asp-validation-for="newDish.DishName"></span>
+            <input class="dishpost mb-3" type="number" asp-for="newDish.Calories" placeholder="Calories">
+                <span asp-validation-for="newDish.Calories"></span>
+            <input class="dishpost mb-3" type="number" asp-for="newDish.Tastiness" placeholder="Tastiness">
+                <span asp-validation-for="newDish.Tastiness"></span>
+        </div>
+        <div>
+            <textarea class="dishdesc mb-2" rows="5" cols="40" asp-for="newDish.Description" placeholder="Description"></textarea>
+                <span asp-validation-for="newDish.Description"></span>
+        </div>
+        <input class="d-inline-block btn btn-success" style="margin-left: 160px;" type="submit" value="Add Dish">
+    </form>
+</div>

@@ -1,0 +1,32 @@
+
+<div>
+    <h1 class="d-inline-block" style="margin-right: 700px;">Add a New Dish!</h1>
+    <a href="/" class="btn btn-outline-primary d-inline-block float-right" style="margin-right: 20px;">Home</a>
+</div>
+
+@model User
+<form class="text-left mt-2 bg-light text-dark rounded pt-3 pb-3 pl-3 pr-3" action="/create" method="POST">
+    <div class="col-sm-4 d-inline-block">
+        <h3>Chef's Name</h3>
+            <input type="text" class="form-control mb-5" asp-for="ChefName">
+            <span class="text-danger" asp-validation-for="ChefName"></span>
+
+        <h3>Name of Dish</h3>
+            <input type="text" class="form-control mb-5"  asp-for="DishName">
+            <span class="text-danger" asp-validation-for="DishName"></span>
+
+        <h3>Number of Calories</h3>
+            <input type="number" class="form-control"  asp-for="Calories">
+            <span asp-validation-for="Calories"></span>
+    </div>
+    <div class="d-inline-block align-top mt-1" style="margin-left: 200px;">
+        <h4>Tastiness</h4>
+        <input type="number" class="form-control mb-5 col-sm-3" asp-for="Tastiness">
+        <span class="text-danger" asp-validation-for="Tastiness"></span>
+
+        <h3>Description</h3>
+            <input type="text" class="form-control" style="width: 300px; height: 150px;"  asp-for="Description">
+            <span class="text-danger" asp-validation-for="Description"></span>
+    </div>
+    <input type="submit" class="btn btn-primary d-block mt-5 ml-3">
+</form>

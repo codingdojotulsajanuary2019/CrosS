@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.0/css/bootstrap.min.css" integrity="sha384-PDle/QlgIONtM1aqA2Qemk5gPOE7wFq8+Em+G/hmo5Iq0CCmYZLv3fVRDJ4MMwEA" crossorigin="anonymous">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Favorite Books</title>
+</head>
+<body class="bg-dark text-light text-center">
+    <div class="container-fluid text-left d-inline-block border-bottom border-bottom border-light">
+        <h2 class="mt-1 d-inline-block">
+            Welcome, {{name}}!
+        </h2>
+        <h3 class="float-right mt-2 d-inline-block">
+            <a href="/logout">Log Out</a> 
+        </h3>
+    </div>
+    <div class="text-left ml-3 mt-4" style="margin-right: 800px;">
+        {% if userid == theuserid %}
+            <form action="/submitnew/{{nameofbook[0]['book_id']}}" class="text-right" method="POST">
+                <p>New Title: <input name="newtitle" class="form-control col-sm-3 d-inline-block" type="text" value="{{nameofbook[0]['name']}}"></p>
+                <p>New Description: <input name="newdesc" class="form-control col-sm-3 d-inline-block" type="text" value="{{nameofbook[0]['description']}}"></p>
+                <span><p><a class="btn btn-outline-success d-inline-block" href="/delete/{{nameofbook[0]['book_id']}}">Delete</a>
+                <a class="btn btn-outline-success d-inline-block" href="/books">Back</a>
+                <input type="submit" value="Submit" class="btn btn-success d-inline-block"></p></span>
+            </form>
+        {% endif %}
+    </div>
+
+        {% if userid != theuserid %}
+        <div class="text-center">
+            <div class="d-inline text-align-top" style="margin-right: 300px; margin-left: 500px;">
+                <h2>Title: {{nameofbook[0]["name"]}}</h2>
+                <h4>Description: {{nameofbook[0]["description"]}}</h4>
+                <p><a class="btn btn-outline-success mt-3" href="/books">Back</a></p>
+            </div>
+            <div class="d-inline align-top">
+                <h2>
+                    Favorited By:
+                </h1>
+                <h4>
+                    {% for z in cupofjoe %}
+                        {% if z['books_book_id'] == nameofbook[0]['book_id'] %}
+                            <p>
+                                {{z['users_user_id']}}:
+                                    {% for l in allusers %}
+                                        {% if l['user_id'] == z['users_user_id'] %}
+                                            {{l['first_name']}}
+                                        {% endif %}
+                                    {% endfor %}
+                            </p>
+                        {% endif %}
+                    {% endfor %}
+                </h4>
+            </div>
+        </div>
+        {% endif %}
+</body>
+</html>

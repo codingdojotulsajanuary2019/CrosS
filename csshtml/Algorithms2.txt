@@ -1,0 +1,56 @@
+Code Sample 1) Dojo
+Code Sample 2) hello, x is, 15
+Code Sample 3) n is, 3, x is, 18
+Code Sample 4) n is, 3, n is, 5, x is, 16
+Code Sample 5) c is, 5, c is, 8, x is, 13
+Code Sample 6) c is, 5, c is, 3, c is, 3, c is, 5, x is, 19
+Code Sample 7) 15, 15/UD
+
+Assignment 1) 2, 3
+Assignment 2) 6, 10
+Assignment 3) 3, 7
+Assignment 4) 15, 15, 10, 15
+Assignment 5) 0, 2, 4, 6, 8, 10, 12, 14
+Assignment 6) 0, 0, 0, 1, 0, 2
+Assignment 7) Undefined
+Assignment 8) 0, 0, 0, 0, 1, 2, 0, 2, 4
+
+<B>PART2</B>
+<U>One</U>
+
+function printUpTo(x){
+  for(var i = 0; i <= 1000; i++){
+      if(i > 0){
+          console.log(i);
+      }
+      else if(i < 0){
+          return false;
+      }
+  }
+}
+printUpTo(1000); // should print all the integers from 1 to 1000
+y = printUpTo(-10); // should return false
+console.log(y); // should print false
+
+<U>Two</U>
+
+function printSum(x){
+  var sum = 0;
+  for(var i = 0; i <= x; i++){
+      sum = sum + i;
+  }
+  return sum
+}
+y = printSum(255) // should print all the integers from 0 to 255 and with each integer print the sum so far.
+console.log(y) // should print 32640
+
+<U>Three</U>
+
+function printSumArray(x){
+  var sum = 0;
+  for(var i=0; i<x.length; i++) {
+    sum = sum + arr[i];
+  }
+  return sum;
+}
+console.log( printSumArray([1,2,3]) ); // should log 6

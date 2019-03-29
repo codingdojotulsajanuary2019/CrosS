@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.0/css/bootstrap.min.css" integrity="sha384-PDle/QlgIONtM1aqA2Qemk5gPOE7wFq8+Em+G/hmo5Iq0CCmYZLv3fVRDJ4MMwEA" crossorigin="anonymous">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Edit Users</title>
+</head>
+<body class="bg-dark text-primary text-center">
+    <h1 class="d-inline-block">
+        Edit User {{ l[0]["user_id"] }}
+    </h1>
+    <p class="d-inline-block text-right">
+        <p><a href="/users">Home</a></p>
+    </p>
+    <form action="/editinguser/{{m}}" method="POST">
+        <p class="mb-0">
+            First Name:
+        </p>
+        <p class="mb-2">
+            <input type="text" name="newfirst">
+        </p>
+        <p class="mb-2">
+            Last Name:
+        </p>
+        <p class="mb-2">
+            <input type="text" name="newlast">
+        </p>
+        <p class="mb-2">
+            Email:
+        </p>
+        <p>
+            <input type="text" name="newemail">
+        </p>
+        <p><input class="btn btn-outline-primary" type="submit" value="Update"></p>
+        <a href="/users/<id>">Show User</a>
+    </form>
+</body>
+</html>

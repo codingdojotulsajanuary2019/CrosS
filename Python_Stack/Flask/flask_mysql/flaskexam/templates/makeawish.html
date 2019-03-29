@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.0/css/bootstrap.min.css" integrity="sha384-PDle/QlgIONtM1aqA2Qemk5gPOE7wFq8+Em+G/hmo5Iq0CCmYZLv3fVRDJ4MMwEA" crossorigin="anonymous">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Make a Wish</title>
+</head>
+<body class="bg-dark text-light text-center">
+    <div class="container-fluid text-left d-inline-block border-bottom border-bottom border-light">
+        <h2 class="mt-1 d-inline-block">
+            Hello {{name}}! Make a wish!
+        </h2>
+        <h3 class="float-right mt-2 d-inline-block">
+            <a href="/logout">Log Out</a> 
+        </h3>
+    </div>
+    <div class='bg-light text-dark rounded col-sm-10 mt-5 offset-1 pt-5 pb-3'>
+        <form class="text-right" action="/makeawish" method="POST" style="margin-right: 650px;">
+            <p>
+                I wish for: <input class="form-control col-sm-3 d-inline-block" type="text" name="mywish">
+            </p>
+            <p>
+                Description: <input class="form-control col-sm-3 d-inline-block" type="text" name="desc">
+            </p>
+            <p>
+                <a class="btn btn-success" href="/wishes">Cancel</a>
+                <input class="btn btn-success" type="submit">
+            </p>
+        </form>
+    </div>
+    {% with messages = get_flashed_messages() %}
+        {% if messages %}
+            {% for message in messages %}
+                <p class="text-danger ml-5">{{message}}</p>
+            {% endfor %}
+        {% endif %}
+    {% endwith %}
+</body>
+</html>

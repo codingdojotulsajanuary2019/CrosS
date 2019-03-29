@@ -1,0 +1,17 @@
+@using loginRegistration.Models
+@model LoginUser
+
+<div>
+    <h1 class="d-inline-block" style="margin-left: 20px;">Login to this Cool Site!</h1>
+    <h3 class="float-right"><a href="/register" class="d-inline-block">Register</a></h3>
+</div>
+<HR>
+<div class="align-middle">
+    <form class="edge mt-3 rform" action="/signin" method="POST">
+        <input class="register d-block" type="text" asp-for="Email" placeholder="Email Address" style="margin: 0 auto; margin-top: 50px;">
+            <span class="text-danger" asp-validation-for="Email"></span>
+        <input class="register d-block" type="text" asp-for="Password" placeholder="Password" style="margin: 0 auto; margin-top: 20px;">
+            <span class="text-danger" asp-for-validation="Password"></span>
+        <input class="rbutton d-block" type="submit" value="Sign In" style="margin: 0 auto; margin-top: 30px; ">
+    </form>
+</div>

@@ -1,0 +1,15 @@
+﻿@model CRUDeliciousReal.Models.User2
+<h1>Welcome to CRUDelicious</h1>
+<div class=" text-left mt-5 d-inline-block" style="margin-right: 650px;">
+    <h4>Check out some recent dishes!</h4>
+</div>
+    <span class="text-right d-inline-block"><h4><a href="/new">Add a Dish</a></h4></span>
+    <HR>
+<div class="d-block text-left">
+    @{
+        foreach(var x in Model.AllDishes)
+        {
+            <h2> <a href="/@x.dish_id">@x.DishName</a> by @x.ChefName </h2>
+        }
+    }
+</div>

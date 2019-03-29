@@ -1,0 +1,15 @@
+The pip install Django==1.11.9 command installed Django version 1.11.9 in the myenvironment once i had it activated.
+After Django was installed I used the pip list command to list out the etire directory contents once it was activated.
+Once not activated I used the pip3 command and it listed the things that were active, so nothing that I had just installed in Django while the environment was active.
+The deactivate command deactivated my environment after I was done installing Django.
+After I ran the install command again after it was already installed the terminal returned the following: Collecting Django==1.11.9
+  Using cached https://files.pythonhosted.org/packages/c8/a6/291039f0ce4b9818e0399359866337e6dfe9c0e23d8d94f00e657edbfcd8/Django-1.11.9-py2.py3-none-any.whl
+Collecting pytz (from Django==1.11.9)
+  Using cached https://files.pythonhosted.org/packages/61/28/1d3920e4d1d50b19bc5d24398a7cd85cc7b9a75a490570d5a30c57622d34/pytz-2018.9-py2.py3-none-any.whl
+Installing collected packages: pytz, Django
+Successfully installed Django-1.11.9 pytz-2018.9
+So it just downloaded the same files I already had, without duplication,
+using pip freeze it only showed me my django and my pytz nothing else.
+uninstall obviously uninstalls django if I ask it to. 
+show django gives me all of the advanced information about django.
+pip search flask searches my activated environment for any Flask information or files.

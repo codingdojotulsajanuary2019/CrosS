@@ -1,0 +1,39 @@
+
+Dsike@LAPTOP-54IRVN02 MINGW64 ~ (master)
+$ mkdir
+mkdir: missing operand
+Try 'mkdir --help' for more information.
+
+Dsike@LAPTOP-54IRVN02 MINGW64 ~ (master)
+$ git clone https://github.com/codingdojotulsajanuary2019/cros_s.git
+Cloning into 'cros_s'...
+remote: Enumerating objects: 4, done.
+remote: Counting objects: 100% (4/4), done.
+remote: Compressing objects: 100% (4/4), done.
+remote: Total 4 (delta 0), reused 0 (delta 0), pack-reused 0
+Unpacking objects: 100% (4/4), done.
+
+Dsike@LAPTOP-54IRVN02 MINGW64 ~ (master)
+$ cd
+
+Dsike@LAPTOP-54IRVN02 MINGW64 ~ (master)
+$ cd..
+bash: cd..: command not found
+
+Dsike@LAPTOP-54IRVN02 MINGW64 ~ (master)
+$ ls
+'3D Objects'/        'Local Settings'@                                                                               ntuser.ini
+ AppData/             MicrosoftEdgeBackups/                                                                          OneDrive/
+'Application Data'@   Music/                                                                                         Pictures/
+ Contacts/           'My Documents'@                                                                                 PrintHood@
+ Cookies@             NetHood@                                                                                       Recent@
+ cros_s/              NTUSER.DAT                                                                                    'Saved Games'/
+ Desktop/             ntuser.dat.LOG1                                                                                Searches/
+ Documents/           ntuser.dat.LOG2                                                                                SendTo@
+ Downloads/           NTUSER.DAT{803fc7e1-8c81-11e8-92dc-48ba4e4baebf}.TM.blf                                       'Start Menu'@
+ Favorites/           NTUSER.DAT{803fc7e1-8c81-11e8-92dc-48ba4e4baebf}.TMContainer00000000000000000001.regtrans-ms   Templates@
+ Links/               NTUSER.DAT{803fc7e1-8c81-11e8-92dc-48ba4e4baebf}.TMContainer00000000000000000002.regtrans-ms   Videos/
+
+Dsike@LAPTOP-54IRVN02 MINGW64 ~ (master)
+$
+

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.0/css/bootstrap.min.css" integrity="sha384-PDle/QlgIONtM1aqA2Qemk5gPOE7wFq8+Em+G/hmo5Iq0CCmYZLv3fVRDJ4MMwEA" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body class="bg-dark text-light text-center">
+    <h1 class="text-center">All the Pets!</h1>
+    <div class="text-center offset-4">
+    <table class="border border-light text-left">
+        <tr>
+            <th class="border border-light" style="width: 100px;">
+                ID
+            </th>
+            <th class="border border-light" style="width: 300px;">
+                Name
+            </th>
+            <th class="border border-light" style="width: 300px;">
+                Type
+            </th>
+        </tr>
+    {% for one_pet in all_pets %}
+        <tr>
+            <td class="border border-light" stlyle="width: 100px;">
+                {{one_pet["pet_id"]}}
+            </td>
+            <td class="border border-light" style="width: 300px;">
+                {{one_pet["name"]}}
+            </td>
+
+            <td class="border border-light" style="width: 300px;">
+                {{one_pet["type"]}}
+            </td>
+        </tr>
+    {% endfor %}
+    </table>
+    </div>
+    <HR>
+    <div class="text-right" style="padding-right: 870px;">
+        <h1 class="mb-3">
+            Add a Pet
+        </h1>
+        <form action="/add" method="POST">
+            <p>
+                Name <input type="text" name="newname">
+            </p>
+            <p>
+                Type <input type="text" name="newtype">
+            </p>
+            <input class="btn btn-light"type="submit" value="Add" name="addnew">
+        </form>
+    </div>
+</body>
+</html>

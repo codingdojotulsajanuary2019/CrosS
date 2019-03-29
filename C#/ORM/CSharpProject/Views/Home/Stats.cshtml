@@ -1,0 +1,43 @@
+<div class="me has-background-dark container body-content" style="padding-top: 50px; padding-bottom: 20px;">
+<div class="has-text-centered">
+    <h1 class="has-text-light" style="font-size: 200%;">PROGRESS</h1>
+</div>
+<div style="margin-bottom: 40px;">
+    <progress class="progress is-success" style="width: 600px; margin-left: 360px; margin-bottom: 5px;" value="69" max="100">69%</progress>
+        <div class="has-text-light is-inline-block" style="margin-left: 325px;">Account Setup</div>
+        <div class="has-text-light is-inline-block" style="margin-left: 80px;">Personal Details</div>
+        <div class="has-text-light is-inline-block" style="margin-left: 80px;">Physical Statistics</div>
+        <div class="has-text-light is-inline-block" style="margin-left: 80px;">Complete!</div>
+</div>
+<div class="has-text-centered" style="margin-left: 160px;">
+    <div class="has-background-light register2 has-text-centered" style="border-radius: 10px;">
+        <h3 class="text-dark regheader" style="padding-top: 20px;">PHYSICAL STATISTICS</h3>
+        <p>Part 3</p>
+        <form action="/registerstats" style="margin-top: 20px;">
+            <input type="text" name="Height" class="input" placeholder="Height" style="width: 430px; margin-bottom: 30px;  height: 50px; margin-right: 10px;">
+            <input type="number" name="Age" class="input" placeholder="Age" style="width: 430px; margin-bottom: 30px;  height: 50px;">
+            <input type="number" name="Weight" class="input" placeholder="Weight (lbs.)" style="width: 430px; margin-bottom: 30px;  height: 50px; margin-right: 10px;">
+            <select type="number" name="Age" class="input" style="width: 430px; margin-bottom: 30px;  height: 50px;">
+                <option>Gender</option>
+                <option value="Male">Male</option>
+                <option value="Female">Female</option>
+                <option value="Non-Binary">Non-Binary</option>
+            </select>
+            <input type="number" name="SquatMax" class="input" placeholder="Squat Max (lbs.)" style="width: 430px; margin-bottom: 30px;  height: 50px; margin-right: 10px;">
+            <input type="text" name="WorkoutStyle" class="input" placeholder="Workout Style" style="width: 430px; margin-bottom: 30px;  height: 50px;">
+            <input type="number" name="BenchMax" class="input" placeholder="Bench Max (lbs.)" style="width: 430px; margin-bottom: 30px;  height: 50px; margin-right: 10px;">
+            <input type="text" name="WorkoutFrequency" class="input" placeholder="Workout Frequency" style="width: 430px; margin-bottom: 30px;  height: 50px;">
+            <h2>Experience Level</h2>
+            <input type="range" name="Experience" min="1" max="11" value="6" class="slider" style="width: 300px;">
+            <BR>
+            <div class="is-inline-block" style="margin-top: 40px; height: 100px; padding-top: 15px;">
+                <a href="/success" class="button" style="background-color: #007bff;">Back</a>
+            </div>
+            <div class="is-inline-block" style="padding-top: 0px;">
+                <input type="submit" value="Finish" class="button is-inline-block" style="margin-top: 0px; margin-left: 100px;">
+                <!-- <input type="hidden" value="Model.User.UserId"> -->
+            </div>
+        </form>
+    </div>
+</div>
+</div>

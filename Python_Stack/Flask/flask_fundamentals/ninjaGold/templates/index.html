@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.0/css/bootstrap.min.css" integrity="sha384-PDle/QlgIONtM1aqA2Qemk5gPOE7wFq8+Em+G/hmo5Iq0CCmYZLv3fVRDJ4MMwEA" crossorigin="anonymous">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Ninja Gold</title>
+</head>
+<body class="bg-dark text-light">
+    <div>
+        <p>
+            <h4 class="ml-4">Your Gold: {{session["gold"]}} </h4>
+        </p>
+    </div>
+    <form class="d-inline-block" action="/process_money" method="post">
+    <div class="conatiner-fluid bg-secondary border border-light d-inline-block text-center ml-4 pt-4 rounded" style="width: 400px; height: 170px;">
+        <div>
+            <h2>
+                Farm
+            </2>
+            <h3>
+                (earns 10-20 golds)
+            </h3>
+            <input type="hidden" name="which_property" value="farm">
+            <input class="btn btn-primary" type="submit" name="find_gold" value="Find Gold!">
+        </div>
+    </div>
+    </form>
+    <form class="d-inline-block" action="/process_money" method="post">
+    <div class="conatiner-fluid bg-secondary border border-light d-inline-block text-center ml-2 pt-4 rounded" style="width: 400px; height: 170px;">
+        <div>
+            <h2>
+                Cave
+            </2>
+            <h3>
+                (earns 5-10 golds)
+            </h3>
+            <input type="hidden" name="which_property" value="cave">
+            <input class="btn btn-primary" type="submit" name="find_gold" value="Find Gold!">
+        </div>
+    </div>
+    </form>
+    <form class="d-inline-block" action ="/process_money" method="post">
+    <div class="conatiner-fluid border bg-secondary border-light d-inline-block text-center pt-4 ml-2 rounded" style="width: 400px; height: 170px;">
+        <div>
+            <h2>
+                House
+            </2>
+            <h3>
+                (earns 2-5 golds)
+            </h3>
+            <input type="hidden" name="which_property" value="house">
+            <input class="btn btn-primary" type="submit" name="find_gold" value="Find Gold!">
+        </div>
+    </div>
+    </form>
+    <form class="d-inline-block" action="/process_money" method="post">
+    <div class="conatiner-fluid border bg-secondary border-light d-inline-block text-center pt-4 ml-2 rounded" style="width:400px; height: 170px;">
+        <div>
+            <h2>
+                Casino
+            </2>
+            <h3>
+                (earns/takes 0-50 golds)
+            </h3>
+            <input type="hidden" name="which_property" value="casino">
+            <input class="btn btn-primary" type="submit" name="find_gold" value="Find Gold!">
+        </div>
+    </div>
+    </form>
+    <div>
+        <p class="ml-4">
+            Activities:
+        </p>
+        <p class="ml-4">
+            Earned {{session['gold']}} golds from the Farm
+        </p>
+        <form action="/clear">
+            <div class="container-fluid text-center">
+                <input class="btn btn-danger text-center mr-5" type="submit" value="Reset">
+            </div>
+        </form>
+    </div>
+</body>
+</html>

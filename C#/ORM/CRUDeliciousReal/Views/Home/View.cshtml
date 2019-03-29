@@ -1,0 +1,20 @@
+@model CRUDeliciousReal.Models.User
+<div class="mb-5 text-left">
+    <a class="btn btn-primary" href="/">Home</a>
+</div>
+<div class="container">
+    @{
+        <h1 class="mt-3">@Model.DishName</h1>
+        <h3>@Model.ChefName</h3>
+        <HR class="mt-3">
+
+        <h4 class="text-left">@Model.Description</h4>
+        <h4 class="text-left">Calories: @Model.Calories</h4>
+        <h4 class="text-left">Tastiness: @Model.Tastiness</h4>
+
+
+
+    }
+    <a class="btn btn-danger" href="/delete/@Model.dish_id">Delete</a>
+    <a class="btn btn-success" href="/startedit/@Model.dish_id">Edit</a>
+</div>

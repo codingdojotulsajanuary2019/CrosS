@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.0/css/bootstrap.min.css" integrity="sha384-PDle/QlgIONtM1aqA2Qemk5gPOE7wFq8+Em+G/hmo5Iq0CCmYZLv3fVRDJ4MMwEA" crossorigin="anonymous">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body class="bg-dark">
+    <div class="container-fluid p-3 mb-2 bg-dark col-3">
+        <form action="/process" method="POST">
+            <p class="text-light">Your Name: <input type="text" name="username"></p>
+            {% with messages = get_flashed_messages() %}     <!-- declare a variable called messages -->
+                {% if messages %}                            <!-- check if there are any messages -->
+                    {% for message in messages %}            <!-- loop through the messages -->
+                        <p class="text-danger">{{message}}</p>                   <!-- display each message in a paragraph tag -->
+                    {% endfor %}
+                {% endif %}
+            {% endwith %}
+            <p class="text-light">Dojo Location:
+                <select name="location" class="btn btn-info dropdown-toggle">
+                    <option value="San Jose">San Jose</option>
+                    <option value="Seattle">Seattle</option>
+                    <option value="Tulsa">Tulsa</option>
+                    <option value="Dallas">Dallas</option>
+                    <option value="Silicon Valley">Silicon Valley</option>
+                </select>
+            </p>
+            <p class="text-light">Favorite Language:
+                <select name="language" class="btn btn-info dropdown-toggle">
+                    <option value="Python">Python</option>
+                    <option value="HTML">HTML</option>
+                    <option value="JavaScript">JavaScript</option>
+                    <option value="C#">C#</option>
+                    <option value="PHP">PHP</option>
+                </select>
+            </p>
+            <p class="text-light">Comment (optional):
+                <input type="textarea" name="comment">
+            </p>
+            <input type="submit" class="btn btn-primary">
+        </form>
+    </div>
+</body>
+</html>

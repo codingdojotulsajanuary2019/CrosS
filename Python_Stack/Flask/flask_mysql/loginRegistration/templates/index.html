@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.0/css/bootstrap.min.css" integrity="sha384-PDle/QlgIONtM1aqA2Qemk5gPOE7wFq8+Em+G/hmo5Iq0CCmYZLv3fVRDJ4MMwEA" crossorigin="anonymous">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Login/Registration</title>
+</head>
+<body class="bg-dark text-light text-left">
+    <h1 class="text-center">
+        Login and Registration
+    </h1>
+    {% with messages = get_flashed_messages() %}
+        {% if messages %}
+            {% for message in messages %}
+                <p class="text-danger">{{message}}</p>
+            {% endfor %}
+        {% endif %}
+    {% endwith %}
+    <div class="d-inline-block container" style="width: 900px;">
+        <h2 class="d-inline-block ml-5">
+            Register Here!
+        </h2>
+        <form action="/success" method="POST" class="ml-5 col-sm-10">
+            <p style="margin-bottom: 5px;">
+                First Name:
+            </p>
+            <input type="text" name="first" class="form-control">
+            <p style="margin-top: 20px; margin-bottom: 5px;">
+                Last Name:
+            </p>
+            <input type="text" name="last" class="form-control">
+            <p style="margin-top: 20px; margin-bottom: 5px;">
+                Email:
+            </p>
+            <input type="text" name="email" class="form-control">
+            <p style="margin-top: 20px; margin-bottom: 5px;">
+                Password:
+            </p>
+            <input type="text" name="pass" class="form-control">
+            <p style="margin-top: 20px; margin-bottom: 5px;">
+                Confirm Password:
+            </p>
+            <input type="text" name="cpass" class="form-control" style="margin-bottom: 20px;">
+            <input type="submit" value="Register" class="btn btn-primary">
+        </form>
+    </div>
+    <div class="d-inline-block container" style="width: 800px; vertical-align: top;">
+        <h2>
+            Login Here!
+        </h2>
+        <form action="/login" method="POST">
+            <p style="margin-bottom: 5px;">
+                Email:
+            </p>
+            <input type="text" name="email" class="form-control">
+            <p style="margin-top: 20px; margin-bottom: 5px;">
+                Password:
+            </p>
+            <input type="text" name="pass" class="form-control" style="margin-bottom: 20px;">
+            <input type="submit" value="Login" class="btn btn-primary">
+        </form>
+    </div>
+</body>
+</html>

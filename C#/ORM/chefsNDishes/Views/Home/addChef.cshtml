@@ -1,0 +1,19 @@
+@using chefsNDishes.Models;
+@model Chef;
+
+<div class="mb-2 text-center">
+    <a href="/chefs" class="btn btn-primary float-right mt-2">Home</a>
+    <h1 class="text-light" style="margin-left: 75px;"><U>Add a Chef!</U></h1>
+</div>
+<HR>
+<div class="bg-light rounded pt-5 pb-5 pl-5 pr-5 text-center" style="margin-top: 50px; height: 350px;">
+    <form action="/createChef" method="POST">
+        <p><input class="chefpost d-inline-block" type="text" asp-for="FirstName" placeholder="First Name"></p>
+            <span asp-validation-for="FirstName"></span>
+        <p><input class="chefpost" type="text" asp-for="LastName" placeholder="Last Name"></p>
+            <span asp-validation-for="LastName"></span>
+        <p><input class="chefpost" type="date" asp-for="DOB" placeholder="Date of Birth"></p>
+            <span sp-validation-for="DOB"></span>
+        <input type="submit" class="btn btn-success">
+    </form>
+</div>

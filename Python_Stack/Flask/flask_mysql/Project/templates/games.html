@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.0/css/bootstrap.min.css" integrity="sha384-PDle/QlgIONtM1aqA2Qemk5gPOE7wFq8+Em+G/hmo5Iq0CCmYZLv3fVRDJ4MMwEA" crossorigin="anonymous">
+    <meta charset="UTF-8">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="static/wall.js"></script>
+    <link rel="stylesheet" type="text/css" href="static/style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Games</title>
+</head>
+<body class="text-light text-center background">
+    <div class="border-bottom text-left border-success pb-2">
+        <h2 class="d-inline-block mt-3 ml-3">
+            Welcome {{name[0]['username']}}!
+        </h2>
+        <form action="/logout" class="d-inline-block float-right mr-3">
+            <input type="submit" value="Log Out" class="button2 d-inline-block m-0 mt-2">
+        </form>
+    </div>
+    <div class="container-fluid text-center">
+        <div class="d-inline-block text-center bg-dark pt-5 pb-5 mt-5" style="width: 800px; margin-right: 50px; border-radius: 30px;">
+            <h2 class="d-inline-block mb-3">
+                Add A Game
+            </h2>
+            <form action="/addgame" method="POST" class="ml-5 pl-5 col-sm-10 text-center">
+                <input type="text" name="title" class="focus" placeholder="Game Title">
+                <input type="text" name="desc" class="focus" placeholder="Game Description">
+                <input type="submit" value="Add" class="button">
+            </form>
+        </div>
+        <div class="d-inline-block container text-center bg-dark mr-0 pt-5 pb-5 mt-5 align-top" style="width: 800px; margin-left: 50px; margin-right: 0px; border-radius: 30px;">
+            <h2 class="d-inline-block mb-3">
+                All Games
+            </h2>
+        </div>
+    </div>
+</body>
+</html>

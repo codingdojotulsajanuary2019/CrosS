@@ -1,0 +1,36 @@
+<div class="mb-5 text-left">
+    <a class="btn btn-primary" href="/">Home</a>
+</div>
+<div class="container">
+    @{
+        <h1 class="mt-3">Edit @Model.DishName</h1>
+        @model CRUDeliciousReal.Models.User
+        <form action="/edit/@Model.dish_id" method="POST">
+
+            <div class="d-inline-block align-top">
+                <h3 class="text-left">Chefs Name</h3>
+                    <input class="text-left form-control col-sm-10" asp-for="ChefName" type="text" value="@Model.ChefName">
+
+                <h3 class="text-left" style="margin-top: 20px;">Name of Dish</h3>
+                    <input type="text" class="form-control col-sm-10" value="@Model.DishName"  asp-for="DishName">
+                    <span class="text-danger" asp-validation-for="DishName"></span>
+
+                <h3 class="text-left" style="margin-top: 20px;">Number of Calories</h3>
+                    <input type="number" class="form-control col-sm-5" value="@Model.Calories" asp-for="Calories">
+                    <span asp-validation-for="Calories"></span>
+            </div>
+
+            <div class="d-inline-block align-top mt-1" style="margin-left: 200px;">
+                <h4 class="text-left">Tastiness</h4>
+                <input type="number" asp-for="Tastiness" class="form-control mb-5 col-sm-3" value="@Model.Tastiness">
+                <span class="text-danger" asp-validation-for="Tastiness"></span>
+
+                <h3 class="text-left">Description</h3>
+                    <input type="text" asp-for="Description" value="@Model.Description" class="form-control" style="width: 300px; height: 150px;">
+                    <span class="text-danger" asp-validation-for="Description"></span>
+            </div>
+            <input type="submit" class="btn btn-primary d-block mt-5" style="margin-left: 500px;">
+
+        </form>
+    }
+</div>

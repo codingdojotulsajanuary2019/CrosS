@@ -1,0 +1,20 @@
+@using CExam.Models;
+@model Both;
+
+<div class="text-left">
+    <h1 class="d-inline-block text-left">Hi @foreach(var x in @Model.AllUsers)
+        {
+            @x.Name
+        }!</h1>
+    <a href="/logout" class="btn btn-outline-warning d-inline-block float-right align-top mt-2">Logout</a>
+</div>
+<HR>
+<div class="text-left">
+    <form asp-action="Post" asp-controller="Home" method="POST">
+        <textarea rows="4" cols="50" asp-for="newMessage.Content" class="form-control col-sm-3 mt-3 ml-5 text-warning d-inline-block" placeholder="Post Something Witty Here..."></textarea>
+        <input type="submit" value="POST" class="btn btn-warning d-inline-block" style="margin-bottom: 30px;">
+    </form>
+</div>
+<div>
+    <h4>This is all I know for now..</h4>
+</div>

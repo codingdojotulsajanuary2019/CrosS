@@ -1,0 +1,23 @@
+@model DojoSurveywVal.Models.User;
+<h1>Users Information</h1>
+<Table class=table>
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Location</th>
+            <th>Language</th>
+            <th>Comment</th>
+        </tr>
+    </thead>
+    <tbody>
+        @{
+        <tr>
+            <td>@Model.Name</td>
+            <td>@Model.Location</td>
+            <td>@Model.Language</td>
+            <td>@Model.Comment</td>
+        </tr>
+        }
+    </tbody>
+</Table>
+<a href="/" class="btn btn-primary">Back</a>

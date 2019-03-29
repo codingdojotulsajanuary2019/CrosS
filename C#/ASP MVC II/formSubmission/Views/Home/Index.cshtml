@@ -1,0 +1,24 @@
+﻿@model User
+<form asp-action="Success" asp-controller="Home" method="POST">
+    <h4>First Name:</h4>
+    <input class="form-control" type="text" asp-for="FirstName">
+    <p><span class="text-danger" asp-validation-for="FirstName"></span></p>
+
+    <h4>Last Name:</h4>
+    <input class="form-control" type="text" asp-for="LastName">
+    <p><span class="text-danger" asp-validation-for="LastName"></span></p>
+
+    <h4>Age:</h4>
+    <input class="form-control" type="number" asp-for="Age">
+    <p><span class="text-danger" asp-validation-for="Age"></span></p>
+
+    <h4>Email Address:</h4>
+    <input class="form-control" type="text" asp-for="Email">
+    <p><span class="text-danger" asp-validation-for="Email"></span></p>
+
+    <h4>Password:</h4>
+    <input class="form-control" type="password" asp-for="Password">
+    <p><span class="text-danger" asp-validation-for="Password"></span></p>
+
+    <input type="submit" class="btn btn-primary">
+</form>

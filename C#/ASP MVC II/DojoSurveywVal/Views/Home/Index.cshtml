@@ -1,0 +1,38 @@
+﻿@model DojoSurveywVal.Models.User;
+<h1>Dojo Survey</h1>
+<p>Please fill out the survey below.</p>
+<form action="/Success" method="post">
+    <div class="form-group">
+        <label asp-for="Name">Your Name</label>
+        <input type="text" class="form-control" asp-for="Name" aria-describedby="emailHelp" placeholder="Enter Name">
+        <span asp-validation-for="Name" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="Location">Location</label>
+        <select class="form-control" asp-for="Location">
+            <option>San Jose</option>
+            <option>Dallas</option>
+            <option>Seattle</option>
+            <option>Tulsa</option>
+            <option>Silicon Valley</option>
+        </select>
+        <span asp-validation-for="Location" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="Language">Favorite Language</label>
+        <select class="form-control" asp-for="Language">
+            <option>Python</option>
+            <option>C#</option>
+            <option>Java</option>
+            <option>Ruby</option>
+            <option>HTML/CSS</option>
+        </select>
+        <span asp-validation-for="Language" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="Comment">Comment</label>
+        <textarea class="form-control" asp-for="Comment" rows="3"></textarea>
+        <span asp-validation-for="Comment" class="text-danger"></span>
+    </div>
+    <input type="submit" value="Submit">
+</form>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="static/wall.js"></script>
+    <link rel="stylesheet" type="text/css" href="static/style.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.0/css/bootstrap.min.css" integrity="sha384-PDle/QlgIONtM1aqA2Qemk5gPOE7wFq8+Em+G/hmo5Iq0CCmYZLv3fVRDJ4MMwEA" crossorigin="anonymous">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Login or Register</title>
+</head>
+<body class="text-light text-center background">
+        {% with messages = get_flashed_messages() %}
+            {% if messages %}
+                {% for message in messages %}
+                    <p class="text-danger">{{message}}</p>
+                {% endfor %}
+            {% endif %}
+        {% endwith %}
+        <div class="d-inline-block container bg-dark mr-5 pt-5 pb-5 mt-5" style="width: 800px; margin-left: 50px; border-radius: 30px;">
+            <h2 class="d-inline-block mb-3" style="margin-right: 0%;">
+                Registration
+            </h2>
+            <form action="/success" method="POST" class="ml-5 pl-5 col-sm-10 text-center" id="regForm">
+                <input type="text" id="username" name="username" class="focus" placeholder="Username">
+                <div id="usernameMsg"></div>
+                <input type="text" name="email" class="focus" placeholder="Email">
+                <input type="text" name="pass" class="focus" placeholder="Password">
+                <input type="text" name="cpass" class="focus" style="margin-bottom: 20px;" placeholder="Confirm Password">
+                <input type="submit" value="Register" class="button">
+            </form>
+        </div>
+        <div class="d-inline-block container bg-dark mr-5 pt-5 pb-5 mt-5 align-top" style="width: 800px; margin-left: 50px; border-radius: 30px;">
+            <h2 class="d-inline-block mb-3" style="margin-right: 0%;">
+                Login
+            </h2>
+            <form action="/login" method="POST" class="ml-5 pl-5 col-sm-10 text-center">
+                <input type="text" name="username" class="focus" placeholder="Username">
+                <input type="text" name="pass" class="focus" style="margin-bottom: 20px;" placeholder="Password">
+                <input type="submit" class="button" value="Log In">
+            </form>
+        </div>
+</body>
+</html>
+

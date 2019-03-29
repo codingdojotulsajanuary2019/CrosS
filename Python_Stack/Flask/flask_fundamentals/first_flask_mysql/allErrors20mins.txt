@@ -1,0 +1,7 @@
+Runtime error, cryptography error due to not having my database forward engineered into my MyDatabaseServer.
+
+same error is thrown when the username isnt exactly the same, like if you make the beginning of the username capitalized when its not supposed to be for example.
+
+if you make the name of pretty much anything not exactly the same in everyy single way, aside from usernames and passwords you will get a name error for a variable.
+
+putting a soace at the beginning or end of the charset will cause an attribute error.

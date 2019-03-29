@@ -1,0 +1,16 @@
+table{
+    outline: solid black 2px;
+}
+*{
+    font-size: 20pt;
+}
+td{
+    outline: solid 1px gray;
+    margin: 0px;
+    padding: 0px;
+}
+th{
+    outline: solid gray 2px;
+    margin: 0px;
+    padding: 0px;
+}

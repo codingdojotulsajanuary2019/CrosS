@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <style>
+        body{
+            background-color: black;
+            font-size: 0;
+            margin: 0;
+        }
+        .row div{
+            width: 30px;
+            height: 30px;
+            /* border: 1px solid black; */
+            display: inline-block;
+        }
+        .wall{
+            background-color: blue;
+        }
+        .space{
+            background: none;
+        }
+        .coin{
+            background: url('./coin-spin.gif');
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: 50%;
+        }
+        #pacman{
+            background: url('./pacman.gif');
+            height: 30px;
+            width: 30px;
+            position: absolute;
+            background-size: 75%;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+        #score{
+            color: yellow;
+            margin: 10px;
+            font-size: 16pt;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        .ghost{
+            background :url("./ghost.gif");
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: 18px;
+        }
+    </style>
+    <div id="board"></div>
+    <div id="pacman" style="top: 0px; left: 0px;"></div>
+    <div id="score">Score:</div>
+    <script type="text/javascript">
+        var board=[
+            [2,2,2,2,2,2,2,2,2,2],
+            [2,0,1,1,1,1,1,1,1,2],
+            [2,1,2,1,1,1,1,2,1,2],
+            [2,1,1,1,1,1,1,1,1,2],
+            [2,1,1,1,1,1,1,1,1,2],
+            [2,1,1,1,1,1,1,1,1,2],
+            [2,1,1,1,1,1,1,1,1,2],
+            [2,1,2,1,1,3,1,2,1,2],
+            [2,1,1,1,1,1,1,1,1,2],
+            [2,2,2,2,2,2,2,2,2,2]
+        ];
+        var pacman = {
+            x: 1,
+            y: 1
+        }
+        var score = 0;
+
+        function displayBoard(){
+            var output = "";
+            for(var i = 0; i<board.length; i++){
+                output += "\n<div class='row'>";
+                for (var j=0; j<board[i].length; j++){
+                    if(board[i][j]==2){
+                        output += "\n\t<div class='wall'></div>";
+                    }
+                    else if(board[i][j] == 1){
+                        output += "\n\t<div class='coin'></div>";
+                    }
+                    else if(board[i][j] == 0){
+                        output += "\n\t<div class='space'></div>";
+                    }
+                    else if(board[i][j] == 3){
+                        output += "\n\t<div class='ghost'></div>";
+                    }
+                }
+                output += "\n</div>";
+            }
+            document.getElementById("board").innerHTML = output;
+        }
+        function displayPacman(){
+            document.getElementById('pacman').style.top = pacman.y*30+"px";
+            document.getElementById('pacman').style.left = pacman.x*30+"px";
+        }
+        function displayScore(){
+            document.getElementById('score').innerHTML = "Score: "+score;
+        }
+        displayBoard();
+        displayPacman();
+
+        document.onkeydown=function(e){
+            //RIGHT
+            if(e.keyCode == 39 && board[pacman.y][pacman.x+1] != 2){
+                pacman.x += 1;
+            }
+            //LEFT
+            else if(e.keyCode == 37 && board[pacman.y][pacman.x-1] != 2){
+                pacman.x -= 1;
+            }
+            //UP
+            else if(e.keyCode == 38 && board[pacman.y-1][pacman.x] != 2){
+                pacman.y -= 1;
+            }
+            //DOWN
+            else if(e.keyCode == 40 && board[pacman.y+1][pacman.x] != 2){
+                pacman.y += 1;
+            }
+            //GHOST COLLISION
+            if(board[pacman.y][pacman.x] == 3){
+                pacman = 0;
+            }
+            if(board[pacman.y][pacman.x] == 1){
+                board[pacman.y][pacman.x] = 0;
+                score += 10;
+                displayBoard();
+                displayScore();
+            }
+
+            displayPacman();
+        };
+    </script>
+</body>
+
+</html>

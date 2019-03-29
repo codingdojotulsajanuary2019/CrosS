@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.0/css/bootstrap.min.css" integrity="sha384-PDle/QlgIONtM1aqA2Qemk5gPOE7wFq8+Em+G/hmo5Iq0CCmYZLv3fVRDJ4MMwEA" crossorigin="anonymous">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body class="container-fluid text-center text-light bg-dark">
+    <h1>
+        Welcome to the Great Number Game!
+    </h1>
+    <h2>
+        I am thinking of a number between 1 and 100
+    </h2>
+    <h3>
+        Take a guess!
+    </h3>
+    <p>
+        {{number}}
+    </p>
+    {% if guess %}
+        {% if guess > number %}
+            <div class="bg-danger col-2 container h-50 mb-3">
+                <h1>
+                    Too High!
+                </h1>
+            </div>
+        {% endif %}
+        {% if guess < number %}
+            <div class="bg-danger col-2 container h-50 mb-3">
+                <h1>
+                    Too Low!
+                </h1>
+            </div>
+        {% endif %}
+        {% if guess == number %}
+            <div class="bg-success col-2 container h-50 mb-3">
+                <h1>
+                    You Got It!
+                </h1>
+            </div>
+        {% endif %}
+    {% endif %}
+    <form action="/outcome" method="POST">
+    <p>
+        <input type="text" name="numberbox">
+    </p>
+    <p>
+        <input class="btn btn-info mt-2" type="submit" value="Submit">
+    </p>
+    </form>
+</body>
+</html>

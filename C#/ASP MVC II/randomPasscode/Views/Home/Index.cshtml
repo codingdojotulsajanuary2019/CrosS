@@ -1,0 +1,30 @@
+﻿<h1 class="text-center"><U> Random Passcode Generator </U></h1>
+<h2 class="text-center">
+Attempt Number
+@{
+    @ViewBag.Count
+}
+</h2>
+
+<form action="generate" class="text-center">
+    <h3 class="text-center">
+        @{
+            var chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
+            var stringChars = new Char[14];
+            var random = new Random();
+
+            for(int x=0; x<stringChars.Length; x++)
+            {
+                stringChars[x] = chars[random.Next(chars.Length)];
+            }
+            var finalString = new string(stringChars);
+            <h3 class="text-center bg-light text-dark pt-3 pb-3 rounded" style="display: block; width: 300px; margin-left: 400px;"> @finalString </h3>
+        }
+        <h4 class="text-center" style="display: inline-block">
+            <a href="/" class="btn btn-primary text-center" style="display: inline-block; width: 150px;">Generate</a>
+        </h4>
+        <h4 class="text-center" style="display: block">
+            <a href="/clear" class="btn btn-danger text-center" style="display: inline-block; width: 100px;">Clear</a>
+        </h4>
+    </h3>
+</form>

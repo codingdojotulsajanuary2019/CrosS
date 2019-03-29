@@ -1,0 +1,275 @@
+div.container {
+    width: 1000px;
+    margin: 0 auto;
+    height: 1500px;
+    /* outline: solid black 2px; */
+}
+
+div.topbar {
+    border-radius: 5px;
+    width: 990px;
+    height: 70px;
+    margin: 0 auto;
+    /* outline: solid blue 2px; */
+    background-image: linear-gradient(white, silver);
+}
+
+img.brew {
+    height: 70px;
+    border-radius: 5px 0px 0px 5px;
+}
+
+p.store {
+    /* outline: solid green 2px; */
+    display: inline-block;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16pt;
+    font-weight: bold;
+    margin: 0px;
+    vertical-align: top;
+    padding: 25px 0px 0px 20px;
+}
+
+p.store1 {
+    /* outline: solid green 2px; */
+    display: inline-block;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16pt;
+    font-weight: bold;
+    margin: 0px;
+    vertical-align: top;
+    padding: 25px 0px 0px 30px;
+}
+
+input.search {
+    height: 27px;
+    margin: 0px;
+    border-radius: 20px 0px 0px 20px;
+    vertical-align: top;
+    outline: none;
+    margin: 20px 0px 0px 170px;
+}
+
+img.arrow {
+    border-radius: 0px 20px 20px 0px;
+    height: 33px;
+    vertical-align: top;
+    margin-top: 20px;
+    margin-right: 15px;
+    position: relative;
+    right: 5px;
+}
+
+div.main {
+    /* outline: solid green 2px; */
+    height: 455px;
+    margin: 0 auto;
+    margin-top: 20px;
+    width: 990px;
+    border-radius: 0p 0px 10px 10px;
+}
+
+img.acc {
+    height: 420px;
+}
+
+span.blue {
+    color: rgb(80, 174, 211);
+}
+
+p.longbar {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 11pt;
+    margin-top: 0px;
+    margin-left: 0px;
+    /* outline: solid blue 2px; */
+    padding: 10px 0px 10px 27px;
+    background-image: linear-gradient(to right, rgb(83, 81, 81), rgb(61, 59, 59));
+    border-radius: 0px 0px 10px 10px;
+    color: white;
+    margin-bottom: 0px;
+    position: relative;
+    bottom: 5px;
+    width: 964px;
+}
+
+div.bottommain {
+    /* outline: solid black 2px; */
+    margin: 0 auto;
+    margin-top: 5px;
+    width: 990px;
+    height: 500px;
+}
+
+p.discover {
+    /* outline: solid blue 2px; */
+    display: inline-block;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 25pt;
+    color: silver;
+    margin-left: 30px;
+    margin-top: 50px;
+}
+
+p.browse {
+    border-radius: 7px;
+    background-image: linear-gradient(#3366cc, #2952a3);
+    display: inline-block;
+    height: 20px;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 15px 15px 15px 35px;
+    margin-left: 40px;
+    width: 250px;
+    font-size: 15pt;
+}
+
+div.bottomblocks {
+    /* outline: solid pink 2px; */
+    display: inline-block;
+    width: 225px;
+    height: 390px;
+    margin-left: 15px;
+    margin-top: 15px;
+    padding-top: 10px;
+    vertical-align: top;
+}
+
+img.bottomimgs {
+    width: 30px;
+}
+
+p.hi {
+    display: inline-block;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 15pt;
+    font-weight: bold;
+    margin: 0 auto;
+    margin-left: 10px;
+    padding-top: 10px;
+    vertical-align: top;
+}
+
+/* span.outline{ */
+/* outline: solid black 2px; */
+/* } */
+p.check {
+    margin: 0px;
+    display: inline-block;
+    /* outline: solid blue 2px; */
+    margin-top: 25px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+img.now {
+    /* outline: solid black 2px; */
+    width: 222px;
+    margin-top: 10px;
+}
+
+h1.button {
+    background-image: linear-gradient(#66c2ff, #33adff);
+    padding: 8px 0px 8px 60px;
+    width: 160px;
+    color: white;
+    border-radius: 5px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 15pt;
+    margin: 0 auto;
+    margin-top: 10px;
+}
+
+img.bottomimgs1 {
+    width: 38px;
+}
+
+h1.button1 {
+    background-image: linear-gradient(#66c2ff, #33adff);
+    padding: 8px 0px 8px 47px;
+    width: 170px;
+    color: white;
+    border-radius: 5px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 15pt;
+    margin: 0 auto;
+    margin-top: 10px;
+}
+
+img.bottomimgs2 {
+    width: 42px;
+}
+
+h1.button2 {
+    background-image: linear-gradient(#66c2ff, #33adff);
+    padding: 8px 0px 8px 35px;
+    width: 180px;
+    color: white;
+    border-radius: 5px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 15pt;
+    margin: 0 auto;
+    margin-top: 0px;
+}
+
+img.bottomimgs3 {
+    width: 40px;
+}
+
+h1.button3 {
+    background-image: linear-gradient(#66c2ff, #33adff);
+    padding: 8px 0px 8px 35px;
+    width: 180px;
+    color: white;
+    border-radius: 5px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 15pt;
+    margin: 0 auto;
+    margin-top: 15px;
+}
+
+img.searchbaricon {
+    position: relative;
+    width: 25px;
+    bottom: 1062px;
+    left: 770px;
+}
+
+div.verybottom {
+    /* outline: solid blue 2px; */
+}
+
+div.sixblocks {
+    /* outline: solid pink 2px; */
+    display: inline-block;
+    width: 161px;
+    height: 290px;
+    margin: 0px;
+    vertical-align: top;
+}
+
+p.bottomhead {
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    /* outline: solid yellow 2px; */
+    margin-bottom: 50px;
+}
+
+p.somanyclasses {
+    font-family: Arial, Helvetica, sans-serif;
+    color: gray;
+    font-weight: bold;
+    font-size: 11pt;
+}
+
+div.veryverybottom {
+    /* outline: solid yellow 2px; */
+    height: 30px;
+    margin-top: 5px;
+    color: gray;
+    font-family: Arial, Helvetica, sans-serif;
+    padding-top: 50px;
+}
+
+span.underlineblue {
+    color: blue;
+}

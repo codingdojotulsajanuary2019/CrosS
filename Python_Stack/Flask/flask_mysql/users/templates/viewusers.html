@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.0/css/bootstrap.min.css" integrity="sha384-PDle/QlgIONtM1aqA2Qemk5gPOE7wFq8+Em+G/hmo5Iq0CCmYZLv3fVRDJ4MMwEA" crossorigin="anonymous">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>View All Users</title>
+</head>
+<body class="bg-dark text-primary mt-4 text-center">
+    <h2>
+        All Users
+    </h2>
+    <table class="ml=4" style="margin-left: 600px;">
+        <tr class="border border-primary" style="height: 50px; font-size: 16pt;;">
+            <th class="border border-primary text-light" style="width: 30px;" scope="col">
+                ID
+            </th>
+            <th class="border border-primary text-light" style="width: 140px;" scope="col">
+                Full Name
+            </th>
+            <th class="border border-primary text-light" style="width: 200px;" scope="col">
+                Email
+            </th>
+            <th class="border border-primary text-light" style="width: 150px;" scope="col">
+                Created At
+            </th>
+            <th class="border border-primary text-light" style="width: 210px;" scope="col">
+                Actions
+            </th>
+        </tr>
+        {% for user in allusers %}
+        <tr class="border border-primary" style="height: 50px; font-size: 16pt;">
+            <td class="border border-primary text-light" style="width: 30px;">
+                {{user["user_id"]}}
+            </td>
+            <td class="border border-primary text-light" style="width: 140px;">
+                {{user["full_name"]}}
+            </td>
+            <td class="border border-primary text-light" style="width: 200px;">
+                {{user["email"]}}
+            </td>
+            <td class="border border-primary text-light" style="width: 150px;">
+                {{user["created_at"]}}
+            </td>
+            <td class="border border-primary text-light" style="width: 210px;">
+                <a href="/users/{{user["user_id"]}}">Show</a> | <a href="/users/{{user["user_id"]}}/edit">Edit</a> | <a href="/delete/{{user["user_id"]}}">Delete</a>
+            </td>
+        </tr>
+        {% endfor %}
+    </table>
+    <p>
+        <a href="/users/new">Add a New User</a>
+    </p>
+</body>
+</html>

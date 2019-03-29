@@ -1,0 +1,184 @@
+*{
+    /* outline: solid pink 2px; */
+}
+div.container{
+    width: 1000px;
+    /* outline: solid pink 2px; */
+    height: 910px;
+    margin: 0 auto;
+}
+    div.header{
+        margin: 0px;
+        /* outline: solid yellow 2px; */
+        height: 144px;
+    }
+        img.globe{
+            width: 100px;
+            /* outline: solid silver 2px; */
+            position: absolute;
+        }
+        span.net{
+            color: #007acc;
+        }
+        div.header p{
+            display: inline-block;
+            /* outline: solid green 2px; */
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 15pt;
+            margin: 0 auto;
+        }
+        h1.worldwideweb{
+            margin: 0px;
+            font-family: Arial, Helvetica, sans-serif;
+            height: 50px;
+            background-image: linear-gradient(#007acc, #6699cc, #007acc);
+            padding: 15px 0px 0px 20px;
+            color: white;
+        }
+        div.header p{
+            margin-left: 110px;
+            margin-top: 27px;
+            font-size: 35pt;
+        }
+        span.gray{
+            color: gray;
+        }
+    div.main{
+        width: 1000px;
+        height: 737px;
+        /* outline: solid yellow 2px; */
+        margin-top: 0px;
+        background-image: linear-gradient(#e9ecf1, white, white);
+    }
+        div.leftbar{
+            width: 225px;
+            height: 735px;
+            margin-top: 0px;
+            display: inline-block;
+        }
+            p.whatsinternet{
+                font-family: Arial, Helvetica, sans-serif;
+                font-weight: bold;
+                margin-top: 25px;
+            }
+                span.red{
+                    color: red;
+                }
+            p.interconnected{
+                font-family: Arial, Helvetica, sans-serif;
+                font-weight: bold;
+            }
+                span.blue{
+                    color: #007acc;
+                }
+            button.video{
+                border-radius: 5px;
+                background-image: linear-gradient(#007acc, #6699cc);
+                color: white;
+                font-size: 12pt;
+                font-weight: bold;
+                padding: 10px 0px 10px 10px;
+                width: 220px;
+                box-shadow: dimgray 2px 2px 2px;
+                outline: none;
+            }
+            button.resources{
+                color: white;
+                font-size: 12pt;
+                font-weight: bold;
+                width: 220px;
+                background-image: linear-gradient(#fb8e04, #fb7f04);
+                border-radius: 5px;
+                margin-top: 5px;
+                box-shadow: dimgray 2px 2px 2px;
+                padding: 10px 0px 10px 10px;
+                outline: none;
+            }
+            hr.hr{
+                margin-top: 25px;
+                margin-bottom: 30px;
+                outline: none;
+            }
+            div.bluecode{
+                width: 225px;
+                height: 350px;
+                background-image: url(ad_background.png);
+                padding-top: 2px;
+            }
+                p.reinvent{
+                    color: white;
+                    font-size: 20pt;
+                    font-family: Arial, Helvetica, sans-serif;
+                    text-align: center;
+                    margin-bottom: 0px;
+                }
+                img.ninja{
+                    width: 100px;
+                    margin-left: 62px;
+                    margin-top: 20px;
+                }
+                p.learn{
+                    color: white;
+                    background-image: linear-gradient(Cyan, Skyblue);
+                    display: inline-block;
+                    margin-left: 20px;
+                    padding: 10px 5px 10px 40px;
+                    width: 140px;
+                    border-radius: 5px;
+                }
+    div.middle{
+        display: inline-block;
+        width: 745px;
+        height: 600px;
+        /* outline: solid green 2px; */
+        vertical-align: top;
+        padding-left: 25px;
+    }
+        div.top{
+            /* outline: solid black 2px; */
+            width: 745px;
+            height: 100px;
+        }
+            img.home{
+                width: 25px;
+                margin-top: 10px;
+                vertical-align: top;
+            }
+            p.dns{
+                display: inline-block;
+                margin-top: 13px;
+                margin-left: 3px;
+                vertical-align: top;
+                color: #007aac;
+                font-family: Arial, Helvetica, sans-serif;
+            }
+            img.phone{
+                width: 50px;
+                margin-left: 0px;
+                margin-top: 15px;
+            }
+            div.phones :nth-child(2){
+                display: inline-block;
+                vertical-align: top;
+                font-size: 10pt;
+                font-family: Arial, Helvetica, sans-serif;
+                color: dimgray;
+                width: 200px;
+                margin-left: 10px;
+                margin-bottom: 0px;
+            }
+            div.phones{
+                /* outline: solid orange 2px; */
+                display: inline-block;
+                margin-left: 365px;
+                width: 300px;
+                vertical-align: top;
+            }
+            div.phones h1{
+                display: inline-block;
+                color: skyblue;
+                font-family: Arial, Helvetica, sans-serif;
+                font-size: 20pt;
+                vertical-align: top;
+                margin: 0px;
+            }

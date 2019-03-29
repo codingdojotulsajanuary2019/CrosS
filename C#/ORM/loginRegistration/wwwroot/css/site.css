@@ -1,0 +1,94 @@
+﻿/* Please see documentation at https://docs.microsoft.com/aspnet/core/client-side/bundling-and-minification\ 
+for details on configuring this project to bundle and minify static web assets. */
+body {
+    padding-top: 50px;
+    padding-bottom: 20px;
+    text-align: center;
+}
+
+/* Wrapping element */
+/* Set some basic padding to keep content from hitting the edges */
+.body-content {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+/* Carousel */
+.carousel-caption p {
+    font-size: 20px;
+    line-height: 1.4;
+}
+
+/* Make .svg files in the carousel display properly in older browsers */
+.carousel-inner .item img[src$=".svg"] {
+    width: 100%;
+}
+
+/* QR code generator */
+#qrCode {
+    margin: 15px;
+}
+
+/* Hide/rearrange for smaller screens */
+@media screen and (max-width: 767px) {
+    /* Hide captions */
+    .carousel-caption {
+        display: none;
+    }
+}
+
+.register{
+    display: inline-block;
+    background: none;
+    border-radius: 25px;
+    border: 1px solid #28a745;
+    text-align: center;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    transition: 200ms;
+    margin-top: 30px;
+    margin-bottom: 10px;
+    width: 200px;
+    margin-right: 20px;
+    margin-left: 10px;
+}
+
+.register:focus{
+    width: 300px;
+    border: 1px solid #007bff;
+}
+
+.register:hover{
+    width: 300px;
+    border: 1px solid #007bff;
+}
+
+.edge{
+    width: 660px;
+}
+
+.rform{
+    margin-left: 190px;
+}
+
+.email{
+    position: relative;
+    margin-right: 55px;
+    margin-left: 55px;
+}
+
+.rbutton{
+    background: none;
+    border: 2px solid #007bff;
+    border-radius: 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    width: 150px;
+    color: white;
+    transition: 200ms;
+    margin-right: 90px;
+}
+
+.rbutton:hover{
+    background: #007bff;
+}

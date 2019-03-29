@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.0/css/bootstrap.min.css" integrity="sha384-PDle/QlgIONtM1aqA2Qemk5gPOE7wFq8+Em+G/hmo5Iq0CCmYZLv3fVRDJ4MMwEA" crossorigin="anonymous">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Flask Exam</title>
+</head>
+<body class="bg-dark text-light text-center">
+    <div class="container-fluid text-left d-inline-block border-bottom border-bottom border-light">
+        <h2 class="mt-1 d-inline-block">
+            Hello {{name}}!
+        </h2>
+        <a class="btn btn-outline-success float-right ml-3 mt-2" href="/wishes/new">Make a Wish!</a>
+        <a class="btn btn-outline-success float-right ml-3 mt-2" href="/wishes/stats">View Stats</a>
+        <h3 class="float-right mt-2 d-inline-block">
+            <a href="/logout">Log Out</a> 
+        </h3>
+    </div>
+    <p class="text-left ml-4">
+        Your wish list:
+    </p>
+    <table class="table text-light col-sm-8 offset-2 border-left border-right border-bottom border-light">
+        <tr>
+            <th>
+                Item
+            </th>
+            <th>
+                Date added
+            </th>
+            <th>
+                Actions
+            </th>
+        </tr>
+        {% for x in users %}
+            {% for i in wishes %}
+                {% if i['users_user_id'] == x['user_id'] %}
+                    <tr>
+                        <td>
+                            {{i['name']}}
+                        </td>
+                        <td>
+                            {{i['date_added']}}
+                        </td>
+                        <td>
+                            <a href="/delete/{{i['wish_id']}}">Remove</a> | <a href="/edit/{{i['wish_id']}}">Edit</a> | <a href="/granted/{{i['wish_id']}}">Granted!</a>
+                        </td>
+                    </tr>
+                {% endif %}
+            {% endfor %}
+        {% endfor %}
+    </table>
+    <p class="text-left ml-4">
+        Granted Wishes:
+    </p>
+    <table class="table text-light col-sm-8 offset-2 border-left border-right border-bottom border-light">
+        <tr>
+            <th>
+                Item
+            </th>
+            <th>
+                Date added
+            </th>
+            <th>
+                Date Added
+            </th>
+        </tr>
+        {% for x in users %}
+            {% for i in grantedwishes %}
+                {% if i ["users_user_id"] == x["user_id"] %}
+                    <tr>
+                        <td>
+                            {{i['name']}}
+                        </td>
+                        <td>
+                            {{i['date_added']}}
+                        </td>
+                        <td>
+                            {{i['date_granted']}}
+                        </td>
+                    </tr>
+                {% endif %}
+            {% endfor %}
+        {% endfor %}
+    </table>
+</body>
+</html>
