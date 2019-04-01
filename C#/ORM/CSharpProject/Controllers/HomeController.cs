@@ -14,7 +14,7 @@ namespace CSharpProject.Controllers
         [HttpGet]
         public IActionResult Index()
         {
-            return View("Index");
+            return View("Login");
         }
 
         [HttpGet("registeruser")]
@@ -42,7 +42,7 @@ namespace CSharpProject.Controllers
         [HttpGet("login")]
         public IActionResult LoginPage()
         {
-            return View("Login");
+            return View("Index");
         }
         [HttpGet("loggingin")]
         public IActionResult LoggingIn()
