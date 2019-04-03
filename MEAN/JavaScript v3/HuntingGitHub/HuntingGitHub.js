@@ -5,7 +5,7 @@ $(document).ready(function(){
     console.log("Fetching");
     $.get("https://api.github.com/users/ccsikes", displayName)
     function displayName(data) {
-      console.log(data.name);
+      console.log(data);
       $('h1').html(data.name);
     }
   })
