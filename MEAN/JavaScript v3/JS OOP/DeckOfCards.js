@@ -110,5 +110,6 @@ poker.addPlayer("Phil");
 poker.addPlayer("Cros");
 poker.addPlayer("Michael");
 poker.addPlayer("Jeremy");
+poker.addPlayer("Tabatha");
 poker.startGame();
 poker.showPlayersHand();
