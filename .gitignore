@@ -32,3 +32,4 @@ _ReSharper*/
 packages/
 Python_Stack/MyEnvironments/
 appsettings.json
+node_modules/
