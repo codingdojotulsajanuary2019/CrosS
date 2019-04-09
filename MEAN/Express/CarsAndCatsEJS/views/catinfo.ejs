@@ -1,0 +1,25 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.0/css/bootstrap.min.css" integrity="sha384-PDle/QlgIONtM1aqA2Qemk5gPOE7wFq8+Em+G/hmo5Iq0CCmYZLv3fVRDJ4MMwEA" crossorigin="anonymous">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>My Index</title>
+</head>
+<body>
+    <% for (var x in cats) { %>
+        <div class="bg-primary text-center pt-5 pb-5">
+            <h2 style="font-size: 45pt;">Details Page For <%= cats[x].name %></h2>
+        </div>
+        <div class="text-center rounded container bg-dark text-light pt-5 pb-5 mt-4">
+            <h3>Age: <%= cats[x].age %></h3>
+            <hr>
+            <h3>Favorite Food: <%= cats[x].food %></h3>
+            <hr>
+            <h3>Sleeping Spot: <%= cats[x].sleep %></h3>
+        </div>
+    <% } %>
+</body>
+</html>
