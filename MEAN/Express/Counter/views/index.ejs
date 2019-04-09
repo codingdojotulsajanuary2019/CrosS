@@ -10,11 +10,16 @@
 <body class="bg-dark text-center" style="padding-top: 10%;">
     <div class="text-light">
         <h1 style="font-size: 50pt;">Counter</h1>
-        <h3>Times Visited: <%= count %> times</h3>
+        <h3>Times Visited: 
+            <% if(count == 1){ %>
+                <%= count %> time
+            <% } else { %>
+                <%= count %> times
+            <% } %>
+        </h3> 
         <p><a class="btn btn-primary" href="/">+1</a></p>
         <p><a class="btn btn-success" href="/two">+2</a></p>
         <p><a class="btn btn-danger" href="/clear">Clear</a></p>
     </div>
-    
 </body>
 </html>
