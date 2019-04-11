@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.0/css/bootstrap.min.css" integrity="sha384-PDle/QlgIONtM1aqA2Qemk5gPOE7wFq8+Em+G/hmo5Iq0CCmYZLv3fVRDJ4MMwEA" crossorigin="anonymous">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Basic Mongoose App</title>
+</head>
+<body class="text-center text-light bg-dark">
+    <h1 class="mt-4">Add a Quote!</h1>
+    <form action="/users" method="POST">
+        <input type="text" name="name" class="offset-4 mb-4 form-control col-sm-4" placeholder="Your Name">
+        <textarea style="height: 200px;" name="age" class="offset-4 mb-4 form-control col-sm-4" placeholder="Your Quote"></textarea>
+        <input type="submit" class="btn btn-success">
+        <a href="/quotes" class="btn btn-primary">Skip to Quotes</a>
+    </form>
+    <!-- tip to easily see objects printed in full instead of [object Object] -->
+    <!-- <%- JSON.stringify(messages) %>  -->
+    <!-- based on the structure of your messages, determine how to display them -->
+    <% if(messages.registration) { %>
+        <% for (var x of messages.registration) { %>
+        <h4 class="text-danger"><%= x %></h4>
+        <% } %>
+    <% } %>
+</body>
+</html>
