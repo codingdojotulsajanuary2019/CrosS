@@ -44,10 +44,11 @@ app.post('/users', function(request, response){
 
     user.save(function(error){
         if(error){
-            console.log("Something went wrong!"), error;
+            console.log("Something went wrong!");
             for(var key in error.errors){
                 request.flash('registration', error.errors[key].message);
             }
+            response.render('index');
         }
         else{
             console.log('Successfully added a User!');
@@ -57,9 +58,9 @@ app.post('/users', function(request, response){
 })
 
 app.get('/quotes', function(request, response){
-    User.find({}, function(err, users) {
+    User.find({}, function(error, users) {
         console.log(users);
-        if(err){
+        if(error){
             console.log('Something went wrong!');
             response.redirect('/');
         }
