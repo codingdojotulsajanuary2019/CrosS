@@ -12,12 +12,12 @@
     <div class="bg-light text-left text-dark rounded pt-5 pb-5 mt-4 container" style="padding-left: 130px; width: 25%;">
         <% for(var x=0; x< allducks.length; x++){ %>
             <% if(allducks[x]._id == theduck){ %> 
-                <h3>Duck Color: <%= allducks[x].color %></h3>
-                <h3>Duck Age: <%= allducks[x].age %></h3>
-                <h3>Duck Gender: <%= allducks[x].gender %></h3>
+                <h3>Duck Color: <span class="text-primary"><%= allducks[x].color %></span></h3>
+                <h3>Duck Age: <span class="text-primary"><%= allducks[x].age %></span></h3>
+                <h3>Duck Gender: <span class="text-primary"><%= allducks[x].gender %></span></h3>
             <% } %>
         <% } %>
     </div>
-    <a href="/" class="btn btn-danger mt-4">Back</a>
+    <a href="/" class="btn btn-primary mt-4">Back</a>
 </body>
 </html>
