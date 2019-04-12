@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.0/css/bootstrap.min.css" integrity="sha384-PDle/QlgIONtM1aqA2Qemk5gPOE7wFq8+Em+G/hmo5Iq0CCmYZLv3fVRDJ4MMwEA" crossorigin="anonymous">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>View a duck!</title>
+</head>
+<body class="bg-dark text-light text-center">
+    <h1 class="mt-5">Your Duck!</h1>
+    <div class="bg-light text-left text-dark rounded pt-5 pb-5 mt-4 container" style="padding-left: 130px; width: 25%;">
+        <% for(var x=0; x< allducks.length; x++){ %>
+            <% if(allducks[x]._id == theduck){ %> 
+                <h3>Duck Color: <%= allducks[x].color %></h3>
+                <h3>Duck Age: <%= allducks[x].age %></h3>
+                <h3>Duck Gender: <%= allducks[x].gender %></h3>
+            <% } %>
+        <% } %>
+    </div>
+    <a href="/" class="btn btn-danger mt-4">Back</a>
+</body>
+</html>

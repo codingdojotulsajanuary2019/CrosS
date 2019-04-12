@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.0/css/bootstrap.min.css" integrity="sha384-PDle/QlgIONtM1aqA2Qemk5gPOE7wFq8+Em+G/hmo5Iq0CCmYZLv3fVRDJ4MMwEA" crossorigin="anonymous">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Edit Duck!</title>
+</head>
+<body class="bg-dark text-light text-center">
+    <h1 class="mt-4 mb-4">Edit Your Duck!</h1>
+    <% for(var x=0; x< allducks.length; x++){ %>
+        <% if(allducks[x]._id == theduckid){ %>
+    <form action="/duck/update/<%= allducks[x]._id %>" method="POST">
+        <input type="text" name="newcolor" class="mb-4 form-control col-sm-4 offset-4" placeholder="<%= allducks[x].color %>">
+        <input type="number" name="newage" class="mb-4 form-control col-sm-4 offset-4" placeholder="<%= allducks[x].age %>">
+        <select class="mb-4 form-control col-sm-4 offset-4" name="newgender">
+            <option value="Male">Male</option>
+            <option value="Female">Female</option>
+        </select>
+        <input type="submit" class="btn btn-success">
+        <a href="/" class="btn btn-danger">Back</a>
+    </form>
+        <% } %>
+    <% } %>
+</body>
+</html>
